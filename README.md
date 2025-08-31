@@ -1,2 +1,2 @@
 # calculator-demo
-javascript calculator project
+javascript calculator project defining functions, arithmetic, console logs, errors, and warnings. 
