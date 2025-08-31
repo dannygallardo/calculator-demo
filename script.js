@@ -88,6 +88,7 @@ function multiply(a, b) {
 
 function divide(a, b) {
   if (b === 0) {
+    console.error("Division by zero attempted");
     return "Error, can't divide by 0";
   } else {
     return a / b;
@@ -135,6 +136,9 @@ function handleOperator(nextOperator) {
   // Prepare for the second number input
   // in case the user enters more than one operator
   if (operator && shouldResetDisplay) {
+    console.warn(
+      `Replacing previosu operator ${operator} with ${nextOperator}`
+    );
     operator = nextOperator;
     return;
   }
@@ -178,6 +182,7 @@ function executeOperation() {
   firstOperand = result;
   operator = null;
   shouldResetDisplay = true;
+  console.log("successful operation");
 }
 
 /**
